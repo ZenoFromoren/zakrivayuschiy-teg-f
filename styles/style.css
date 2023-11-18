@@ -50,6 +50,10 @@
   margin-block-end: 20px;
 }
 
+.header__logo:focus {
+  outline: none;
+}
+
 .header__logo-title {
   text-align: center;
   font-size: clamp(14px, 3vw, 23px);
@@ -74,6 +78,7 @@
   padding: 0;
   cursor: pointer;
   opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:disabled {
@@ -99,6 +104,7 @@
   inline-size: 0;
   background-color: var(--accent-color, #000);
   margin-block-start: -2px;
+  transition: inline-size 0.3s ease;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -229,6 +235,10 @@
   min-inline-size: 130px;
 }
 
+.button {
+  transition: box-shadow 0.3s ease;
+}
+
 .button::after {
   content: '';
   position: absolute;
@@ -237,11 +247,13 @@
   block-size: 100%;
   background-color: var(--accent-color, #000);
   inset: 0;
+  transition: inline-size 0.5s ease-in-out;
 }
 
 .button:hover::after {
   inline-size: 100%;
   inset: 0;
+  transition: inline-size 0.5s ease-in-out;
 }
 
 .button:focus-visible {
@@ -256,6 +268,7 @@
   border: 2px solid transparent;
   cursor: pointer;
   padding: 0;
+  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
@@ -354,6 +367,11 @@
   text-transform: uppercase;
   max-inline-size: clamp(198px, 20vw, 234px);
   color: var(--accent-color);
+}
+
+.dialog__form {
+  display: flex;
+  justify-content: center;
 }
 
 .dialog__button {
